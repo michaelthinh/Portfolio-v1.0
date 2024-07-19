@@ -1,6 +1,8 @@
 import classes from "./styles.module.css";
 import { SocialIcon } from "react-social-icons";
 
+import { motion } from "framer-motion";
+
 import { successToast } from "../../../utils/toast";
 
 const socialMedias = [
@@ -44,7 +46,12 @@ export default function Header() {
         <div className={classes.header}>
             <div className={classes.overlay}></div>
             <div className={classes.container}>
-                <div className={classes.context}>
+                <motion.div
+                    className={classes.context}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
                     <div className={classes.avatar}>
                         <img src="/images/avatar_01.jpg" alt="Avatar" />
                     </div>
@@ -72,7 +79,7 @@ export default function Header() {
                             />
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
