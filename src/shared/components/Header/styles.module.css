@@ -1,0 +1,103 @@
+.header {
+    width: 100vw;
+    height: calc(100vh + 20px);
+    background-image: url("/images/banner_01.png");
+    background-position: 0;
+    background-color: transparent;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #FFF;
+}
+
+.overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 144, 0, 0.9);
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.context {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 120px 240px;
+    display: flex;
+    gap:40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.headerName {
+    transform: rotate(-5deg);
+}
+
+.headerName::before{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    content: '';
+    background: #fff;
+    margin-left: -50px;
+}
+
+.headerName::after{
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 30px;
+    height: 4px;
+    content: '';
+    background: #fff;
+    margin-right: -50px;
+}
+
+.headerName span {
+    font-family: "Kaushan Script", cursive;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.headerPosition span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.headerContactText span{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.iconItems{
+    display: flex;
+    gap: 12px;
+}
