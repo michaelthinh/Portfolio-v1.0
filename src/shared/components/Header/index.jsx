@@ -1,13 +1,45 @@
 import classes from "./styles.module.css";
 import { SocialIcon } from "react-social-icons";
 
+import { successToast } from "../../../utils/toast";
+
 const socialMedias = [
-    { network: "facebook", url: "https://www.facebook.com/michaelthinh1008/" },
-    { network: "instagram", url: "https://www.instagram.com/hiimthinj/" },
-    { network: "linkedin", url: "https://www.linkedin.com/in/thinhmaicg/" },
+    {
+        network: "facebook",
+        url: "https://www.facebook.com/michaelthinh1008/",
+        title: "Facebook",
+    },
+    {
+        network: "instagram",
+        url: "https://www.instagram.com/hiimthinj/",
+        title: "Instagram",
+    },
+    {
+        network: "linkedin",
+        url: "https://www.linkedin.com/in/thinhmaicg/",
+        title: "LinkedIn",
+    },
+    {
+        network: "github",
+        url: "https://github.com/michaelthinh",
+        title: "Email",
+    },
+    {
+        network: "email",
+        url: "",
+        title: "Email",
+        value: "michaelthinh1008@gmail.com",
+    },
 ];
 
 export default function Header() {
+    const handleCopy = (value) => {
+        if (!value) {
+            return;
+        }
+        successToast("Email copied to clipboard");
+        navigator.clipboard.writeText(value);
+    };
     return (
         <div className={classes.header}>
             <div className={classes.overlay}></div>
@@ -29,8 +61,14 @@ export default function Header() {
                         {socialMedias.map((item) => (
                             <SocialIcon
                                 key={item.network}
-                                url={item.url}
+                                network={item.network}
+                                url={item.url ? item.url : undefined}
+                                title={item.title ? item.title : ""}
+                                onClick={() => {
+                                    handleCopy(item.value);
+                                }}
                                 target="_blank"
+                                style={{ cursor: "pointer" }}
                             />
                         ))}
                     </div>
