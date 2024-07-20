@@ -22,7 +22,8 @@
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
-    gap:60px;
+    gap:240px;
+    justify-content: space-between;
 }
 
 .info{
@@ -41,7 +42,7 @@
 }
 
 .infoList li{
-    padding: 10px 0;
+    padding: 16px 0;
     display: flex;
     align-items: center;
 }
