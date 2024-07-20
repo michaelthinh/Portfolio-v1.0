@@ -1,5 +1,5 @@
 .aboutMe {
-    padding: 4em 120px 10em;
+    padding: 4em 160px 10em;
     margin-right: auto;
     margin-left: auto;
 }
@@ -22,7 +22,7 @@
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
-    gap:240px;
+    gap:120px;
     justify-content: space-between;
 }
 
@@ -58,7 +58,7 @@
 .second{
     width: 60%;
     display: inline-block;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .introduction{
@@ -75,7 +75,17 @@
     margin-bottom: 20px;
 }
 
+.description p{
+    line-height: 2;
+    text-align: justify;
+}
+
 .descriptionList{
     margin-top: 30px;
 }
 
+.quote{
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 600;
+}

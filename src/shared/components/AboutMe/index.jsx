@@ -49,6 +49,7 @@ export default function AboutMe() {
             initial={{ opacity: 0, x: -70 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className={classes.aboutMe}
         >
             <div className={classes.title}>
@@ -72,7 +73,20 @@ export default function AboutMe() {
                 <div className={classes.introduction}>
                     <h3>Hello there,</h3>
                     <div className={classes.description}>
-                        <p>Below here is my basic education information</p>
+                        <p>
+                            I'm a senior student at HCMUS, majoring in Software
+                            Engineering at the Faculty of Information
+                            Technology. With a strong background in web
+                            development, I excel in designing user-friendly and
+                            efficient interfaces. I've applied my skills to
+                            various web development projects, achieving positive
+                            results.
+                        </p>
+                        <p className={classes.quote}>
+                            &quot; I'm eager to apply my knowledge and
+                            experience to new projects and continue growing in
+                            the IT field. &quot;
+                        </p>
                         <div className={classes.descriptionList}>
                             {descriptionItems.map((item) => (
                                 <DescriptionItem key={item.value} item={item} />
