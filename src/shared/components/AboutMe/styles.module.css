@@ -1,32 +1,33 @@
 .aboutMe {
-    padding: 4em 160px 10em;
+    position: relative;
+    padding: 4em 160px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.title{
+.title {
     text-align: center;
     margin-bottom: 5em;
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.title h2{
+.title h2 {
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: 400;
     line-height: 1.5;
 }
 
-.context{
+.context {
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
-    gap:120px;
+    gap: 120px;
     justify-content: space-between;
 }
 
-.info{
+.info {
     flex-grow: 1;
     position: relative;
     min-height: 1px;
@@ -34,20 +35,20 @@
     padding-right: 15px;
 }
 
-.infoList{
+.infoList {
     margin: 0;
     padding: 0;
     width: 90%;
     float: left;
 }
 
-.infoList li{
+.infoList li {
     padding: 16px 0;
     display: flex;
     align-items: center;
 }
 
-.first{
+.first {
     width: 40%;
     display: inline-block;
     text-align: left;
@@ -55,13 +56,13 @@
     font-weight: bold;
 }
 
-.second{
+.second {
     width: 60%;
     display: inline-block;
     color: rgba(0, 0, 0, 0.8);
 }
 
-.introduction{
+.introduction {
     flex-grow: 2;
     position: relative;
     min-height: 1px;
@@ -69,23 +70,33 @@
     padding-right: 15px;
 }
 
-.introduction h3{
+.introduction h3 {
     font-weight: 400;
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.description p{
+.description p {
     line-height: 2;
     text-align: justify;
 }
 
-.descriptionList{
+.descriptionList {
     margin-top: 30px;
 }
 
-.quote{
+.quote {
     font-style: italic;
     font-size: 16px;
     font-weight: 600;
+}
+
+.borderBottom {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #212a37;
+    width : 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

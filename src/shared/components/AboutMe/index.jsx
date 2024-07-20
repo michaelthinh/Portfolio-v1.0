@@ -74,16 +74,16 @@ export default function AboutMe() {
                     <h3>Hello there,</h3>
                     <div className={classes.description}>
                         <p>
-                            I'm a senior student at HCMUS, majoring in Software
-                            Engineering at the Faculty of Information
+                            I&apos;m a senior student at HCMUS, majoring in
+                            Software Engineering at the Faculty of Information
                             Technology. With a strong background in web
                             development, I excel in designing user-friendly and
-                            efficient interfaces. I've applied my skills to
+                            efficient interfaces. I&apos;ve applied my skills to
                             various web development projects, achieving positive
                             results.
                         </p>
                         <p className={classes.quote}>
-                            &quot; I'm eager to apply my knowledge and
+                            &quot; I&apos;m eager to apply my knowledge and
                             experience to new projects and continue growing in
                             the IT field. &quot;
                         </p>
@@ -95,6 +95,7 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
+            <div className={classes.borderBottom}></div>
         </motion.div>
     );
 }
