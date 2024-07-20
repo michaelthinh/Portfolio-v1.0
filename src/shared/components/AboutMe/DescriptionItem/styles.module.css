@@ -1,0 +1,19 @@
+.descriptionItem{
+    display: flex;
+    gap:12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.descriptionItem .icon{
+    width: 36px;
+    height: 36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 50%;
+}
+
+.descriptionItem h4{
+    font-weight: 700;
+}

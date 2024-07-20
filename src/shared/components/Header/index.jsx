@@ -24,7 +24,7 @@ const socialMedias = [
     {
         network: "github",
         url: "https://github.com/michaelthinh",
-        title: "Email",
+        title: "Github",
     },
     {
         network: "email",
