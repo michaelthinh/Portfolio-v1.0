@@ -34,7 +34,7 @@ export default function WorkItem() {
                     <IconContext.Provider
                         value={{
                             size: "64px",
-                            color: "blue",
+                            color: "#61dafb",
                         }}
                     >
                         <div className={classes.techIcon} title="ReactJS">

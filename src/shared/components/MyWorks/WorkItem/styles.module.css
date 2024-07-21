@@ -30,6 +30,7 @@
 .projectInfo{
     position: relative;
     padding: 1.25rem;
+    width: 50%;
 }
 
 .projectName h3{
