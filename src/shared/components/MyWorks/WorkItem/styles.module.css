@@ -1,0 +1,71 @@
+.projectItem{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.projectBanner{
+    position: relative;
+    width: 50%;
+}
+
+.projectBanner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.demoButton{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) !important;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+}
+
+.projectInfo{
+    position: relative;
+    padding: 1.25rem;
+}
+
+.projectName h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.projectDescription{
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.projectDescription p{
+    line-height: 1.6;
+}
+
+.projectTech{
+    display: flex;
+    gap:12px;
+}
+
+.projectDate{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.projectDate span{
+    font-weight: 700;
+}
+
+.projectCta{
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    display: flex;
+    gap: 24px;
+}
+

@@ -116,7 +116,6 @@ export default function TechnicalSkills() {
                     <SkillItem key={skill.id} skill={skill} />
                 ))}
             </div>
-            <div className={classes.borderBottom}></div>
         </motion.div>
     );
 }
