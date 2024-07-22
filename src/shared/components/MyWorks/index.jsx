@@ -135,12 +135,17 @@ export default function MyWorks() {
                 viewport={{ once: true }}
                 className={classes.context}
             >
-                <div className={classes.projects}>
+                <div
+                    className={`${classes.projects} ${
+                        isGrid && classes.projectsGrid
+                    }`}
+                >
                     {projects.map((project) => (
                         <WorkItem
                             key={project.projectTitle}
                             project={project}
                             iconSize={64}
+                            isGrid={isGrid}
                         />
                     ))}
                 </div>

@@ -5,20 +5,64 @@ import { motion } from "framer-motion";
 import Button from "@mui/material/Button";
 
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
-export default function WorkItem({ project, iconSize }) {
+export default function WorkItem({ project, iconSize, isGrid }) {
+    const [isHovered, setIsHovered] = useState(false);
+    const handleMouseOver = () => {
+        setIsHovered(true);
+        console.log(isHovered);
+    };
+
+    const handleMouseOut = () => {
+        setIsHovered(false);
+        console.log(isHovered);
+    };
     return (
         <motion.div
-            className={classes.projectItem}
+            className={`${classes.projectItem} ${
+                isGrid && classes.projectItemGrid
+            }`}
             whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
             }}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
         >
-            <div className={classes.projectBanner}>
+            {isGrid && isHovered && (
+                <p>
+                    <div className={classes.hoverOverlay}></div>
+                    <div className={classes.ctaOverlay}>
+                        <Button
+                            variant="outlined"
+                            target="_blank"
+                            href={project.projectLink}
+                        >
+                            Source Code
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            target="_blank"
+                            href={project.projectDemo}
+                        >
+                            Live Demo
+                        </Button>
+                    </div>
+                </p>
+            )}
+            <div
+                className={`${classes.projectBanner} ${
+                    isGrid && classes.projectBannerGrid
+                }`}
+            >
                 <img src={project.bannerImg} alt="Project banner" />
             </div>
-            <div className={classes.projectInfo}>
+            <div
+                className={`${classes.projectInfo} ${
+                    isGrid && classes.projectInfoGrid
+                }`}
+            >
                 <div className={classes.projectName}>
                     <h3>{project.projectTitle}</h3>
                 </div>
