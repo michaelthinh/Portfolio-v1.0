@@ -101,21 +101,21 @@ const mySkills = [
 
 export default function TechnicalSkills() {
     return (
-        <motion.div
-            initial={{ opacity: 0, x: 70 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className={classes.technicalSkills}
-        >
+        <div className={classes.technicalSkills}>
             <div className={classes.title}>
                 <h2>My Skills</h2>
             </div>
-            <div className={classes.context}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className={classes.context}
+            >
                 {mySkills.map((skill) => (
                     <SkillItem key={skill.id} skill={skill} />
                 ))}
-            </div>
-        </motion.div>
+            </motion.div>
+        </div>
     );
 }

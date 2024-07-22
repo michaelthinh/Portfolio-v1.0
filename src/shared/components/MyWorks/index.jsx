@@ -10,6 +10,8 @@ import {
     SiPostgresql,
 } from "react-icons/si";
 
+import { motion } from "framer-motion";
+
 const projects = [
     {
         bannerImg: "/banner/t4cvs-banner.png",
@@ -85,11 +87,17 @@ const projects = [
 
 export default function MyWorks() {
     return (
-        <div className={classes.aboutMe}>
+        <div className={classes.myWorks}>
             <div className={classes.title}>
                 <h2>My Works</h2>
             </div>
-            <div className={classes.context}>
+            <motion.div
+                initial={{ y: 70 }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className={classes.context}
+            >
                 <div className={classes.projects}>
                     {projects.map((project) => (
                         <WorkItem
@@ -99,7 +107,7 @@ export default function MyWorks() {
                         />
                     ))}
                 </div>
-            </div>
+            </motion.div>
             <div className={classes.borderBottom}></div>
         </div>
     );

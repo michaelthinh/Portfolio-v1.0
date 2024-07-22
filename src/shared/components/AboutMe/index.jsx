@@ -45,17 +45,17 @@ const descriptionItems = [
 
 export default function AboutMe() {
     return (
-        <motion.div
-            initial={{ opacity: 0, x: -70 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className={classes.aboutMe}
-        >
+        <div className={classes.aboutMe}>
             <div className={classes.title}>
                 <h2>About Me</h2>
             </div>
-            <div className={classes.context}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className={classes.context}
+            >
                 <div className={classes.info}>
                     <ul className={classes.infoList}>
                         {infoItems.map((item) => (
@@ -94,8 +94,8 @@ export default function AboutMe() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className={classes.borderBottom}></div>
-        </motion.div>
+        </div>
     );
 }
