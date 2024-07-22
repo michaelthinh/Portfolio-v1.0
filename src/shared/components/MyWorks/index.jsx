@@ -1,7 +1,9 @@
 import classes from "./styles.module.css";
 import WorkItem from "./WorkItem";
 
-import { FaReact, FaAmazon } from "react-icons/fa";
+import { IconContext } from "react-icons";
+
+import { FaReact, FaAmazon, FaList } from "react-icons/fa";
 import {
     SiTailwindcss,
     SiRedux,
@@ -9,8 +11,10 @@ import {
     SiNestjs,
     SiPostgresql,
 } from "react-icons/si";
+import { IoGridOutline } from "react-icons/io5";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const projects = [
     {
@@ -86,10 +90,43 @@ const projects = [
 ];
 
 export default function MyWorks() {
+    const [isGrid, setIsGrid] = useState(false);
+    const setView = (value) => {
+        setIsGrid(value);
+    };
     return (
         <div className={classes.myWorks}>
             <div className={classes.title}>
                 <h2>My Works</h2>
+            </div>
+            <div className={classes.projectSortByView}>
+                <IconContext.Provider
+                    value={{
+                        size: "24px",
+                        color: "",
+                    }}
+                >
+                    <div
+                        className={`${classes.viewButton} ${
+                            !isGrid && classes.buttonActive
+                        }`}
+                        onClick={() => {
+                            setView(false);
+                        }}
+                    >
+                        <FaList />
+                    </div>
+                    <div
+                        className={`${classes.viewButton} ${
+                            isGrid && classes.buttonActive
+                        }`}
+                        onClick={() => {
+                            setView(true);
+                        }}
+                    >
+                        <IoGridOutline />
+                    </div>
+                </IconContext.Provider>
             </div>
             <motion.div
                 initial={{ y: 70 }}
