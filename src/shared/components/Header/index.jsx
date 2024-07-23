@@ -52,6 +52,18 @@ export default function Header() {
                             />
                         ))}
                     </div>
+                    <motion.a
+                        href="https://drive.google.com/file/d/1UjJ3H5tvJjl3GmH7lDt779MAOX9Eq3Ko/view?usp=sharing"
+                        target="_blank"
+                        initial={{ opacity: 0.9 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }}
+                        className={classes.myCVButton}
+                    >
+                        <div className={classes.buttonContainer}>
+                            <span>My CV</span>
+                        </div>
+                    </motion.a>
                 </motion.div>
             </div>
         </div>

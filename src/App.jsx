@@ -1,9 +1,10 @@
 import "./App.css";
+import MainLayout from "./layouts/MainLayout";
 import AboutMe from "./shared/components/AboutMe";
 import Header from "./shared/components/Header";
 import TechnicalSkills from "./shared/components/TechnicalSkills";
 import MyWorks from "./shared/components/MyWorks";
-import MainLayout from "./layouts/MainLayout";
+import ContactMe from "./shared/components/ContactMe";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <AboutMe />
             <TechnicalSkills />
             <MyWorks />
+            <ContactMe />
         </MainLayout>
     );
 }
